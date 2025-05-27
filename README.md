@@ -1,11 +1,12 @@
 # Learning Git and Github
 
 - [Learning Git and Github](#learning-git-and-github)
-  - [Git Basic Commands](#git-basic-commands)
+  - [Initial Setup](#initial-setup)
+  - [Basic Workflow](#basic-workflow)
   - [Other Commands](#other-commands)
   - [Tutorials and References](#tutorials-and-references)
 
-## Git Basic Commands
+## Initial Setup
 
 1. Initialise Folder as Repository and add all files to Repository
 ```
@@ -13,19 +14,34 @@ git init
 git add .
 ```
 
-2. Add all changes and commit
-```
-git commit -a -m "commit description/message"
-```
-
-3. Add GitHub Repositoory
+2. Add GitHub Repositoory
 ```
 git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git
 ```
 
-4. Push Changes to GitHub
+3. Commit
+```
+git commit -m "commit description/message"
+```
+
+
+4. Set Upstream and Push changes to GitHub
 ```
 git push --set-upstream origin main
+OR
+git push -u origin main
+```
+
+## Basic Workflow
+
+1. Add all changes and commit
+```
+git commit -a -m "commit description/message"
+```
+
+2. Push Changes to Github (when upstream is already set)
+```
+git push
 ```
 
 ## Other Commands
