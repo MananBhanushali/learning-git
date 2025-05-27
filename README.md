@@ -13,9 +13,9 @@ git init
 git add .
 ```
 
-2. Commit Changes 
+2. Add all changes and commit
 ```
-git commit -m "commit description/message"
+git commit -a -m "commit description/message"
 ```
 
 3. Add GitHub Repositoory
