@@ -14,7 +14,7 @@ git init
 git add .
 ```
 
-2. Add GitHub Repositoory
+2. Add GitHub Repository
 ```
 git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git
 ```
@@ -55,6 +55,18 @@ git clone https://github.com/owner/repo.git
 ```
 git branch my-branch
 git checkout my-branch
+```
+
+3. Revert Back to Previous Commit
+```
+git reset --hard HEAD~1
+OR
+git reset --hard <sha1-commit-id>
+
+THEN 
+git push 
+OR
+git push origin HEAD --force (If commit is already pushed)
 ```
 
 ## Tutorials and References 
