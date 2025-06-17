@@ -3,6 +3,7 @@
 - [Learning Git and Github](#learning-git-and-github)
   - [Initial Setup](#initial-setup)
   - [Basic Workflow](#basic-workflow)
+  - [Branching](#branching)
   - [Other Commands](#other-commands)
   - [Tutorials and References](#tutorials-and-references)
 
@@ -27,7 +28,7 @@ git commit -m "commit description/message"
 
 4. Set Upstream and Push changes to GitHub
 ```
-git push --set-upstream origin main
+git push --set-upstream origin main // Or other branch instead of main
 OR
 git push -u origin main
 ```
@@ -44,6 +45,33 @@ git commit -a -m "commit description/message"
 git push
 ```
 
+## Branching
+
+1. Creating and switching to a branch
+```
+git branch my-branch
+git checkout my-branch
+OR
+git checkout -b my-branch // Create as well as checkout 
+```
+
+2. Finding Difference between current branch and other branch
+```
+git diff branch-name
+```
+
+3. Merge another branch into current branch
+```
+git checkout current-branch
+git merge other-branch
+```
+
+4. Delete a branch
+```
+git branch -d branch-name
+```
+
+
 ## Other Commands
 
 1. Cloning a repository 
@@ -51,15 +79,23 @@ git push
 git clone https://github.com/owner/repo.git
 ```
 
-2. Creating and switching to a branch
+2. Pull from Github to local repository
 ```
-git branch my-branch
-git checkout my-branch
+git pull --set-upstream origin main 
+OR
+git pull -u origin main
 ```
 
-3. Revert Back to Previous Commit
+3. Unstage Previous Commit
 ```
-git reset --hard HEAD~1
+git reset 
+OR
+git reset file-name // To unstage a particular file
+```
+
+4. Revert Back to Previous Commit
+```
+git reset --hard HEAD~1 // --hard while change local files too
 OR
 git reset --hard <sha1-commit-id>
 
@@ -67,6 +103,11 @@ THEN
 git push 
 OR
 git push origin HEAD --force (If commit is already pushed)
+```
+
+5. See list of commits
+```
+git log
 ```
 
 ## Tutorials and References 
