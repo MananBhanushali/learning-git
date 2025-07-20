@@ -95,7 +95,7 @@ git reset file-name // To unstage a particular file
 
 4. Revert Back to Previous Commit
 ```
-git reset --hard HEAD~1 // --hard while change local files too
+git reset --hard HEAD~1 // --hard will change local files too
 OR
 git reset --hard <sha1-commit-id>
 
